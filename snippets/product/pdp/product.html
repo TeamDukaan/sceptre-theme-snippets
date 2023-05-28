@@ -1,0 +1,64 @@
+<!--imports your layout which contains common components like header footer and meta tags -->
+{% extends "./layout.html" %}
+
+<!--add addtional head tags like css files, schema tags, seo tags.-->
+<!-- Everything in here will go inside <head> tag -->
+{% block head %}
+
+<!--  this will include product.css present in /public/css/product.css-->
+{{ 'product.css' | css | static }}
+
+<!--  this will include common seo tags, schema tags, can be skipped if you want to add your own tags -->
+{% include '../common/page-imports/product-page-imports.html' %}
+
+{% endblock head %}
+
+<!--main content starts from here-->
+<!-- Everything in here will go inside <body> tag -->
+{% block content %}
+<div>
+  <!-- Render product name, selling price and original price -->
+  <h1>{{ DUKAAN_PRODUCT.name }}</h1>
+  <p>{{ DUKAAN_PRODUCT.selling_price }}</p>
+  <p>MRP: {{ DUKAAN_PRODUCT.original_price }}</p>
+
+
+  <!-- Render in stock text/image/button based on available stock. If/Else can be used in such cases  -->
+  {% if DUKAAN_PRODUCT.in_stock %}
+    <p style="color: green">Availability: In stock</p>
+  {% else %}
+    <p style="color: red">Availability: Out of Stock</p>
+  {% endif %}
+
+  <!-- Render product image, array can be looped to access individual images -->
+  {% for image in DUKAAN_PRODUCT.all_images %}
+    <img src="{{ image | cdn(700) }}" alt="{{DUKAAN_PRODUCT.name}}"/>
+  {% endfor %}
+
+  <!-- Render product description, this syntax is required to render rich text added from editor -->
+  <p>{{ DUKAAN_PRODUCT.description | htmlSanitizer | safe }}</p>
+
+  <!-- breadcrumb example -->
+  <!-- Home / Shop / Dresses / Pink Cotton Top -->
+  <ul>
+    <li>
+      <!-- Redirects to home page -->
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <!-- Redirects to all categories page -->
+      <a href="/categories">Shop</a>
+    </li>
+    <li>
+      <a href="/categories/{{ DUKAAN_PRODUCT.categories[0].slug }}">
+        <!-- Get first category name -->
+        {{ DUKAAN_PRODUCT.categories[0].name }}
+      </a>
+    </li>
+    <li aria-current="page">
+      <!-- Get product name -->
+      {{ DUKAAN_PRODUCT.name }}
+    </li>
+  </ul>
+</div>
+{% endblock content %}

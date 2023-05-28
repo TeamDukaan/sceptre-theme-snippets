@@ -1,0 +1,67 @@
+{
+  "id": 37345674, // product ID
+  "uuid": "5626a1ae-57a5-4106-8d98-6ad9b51068d0", // product UUID
+  "name": "Classic Dress", // product name, DUKAAN_PRODUCT.name
+  "slug": "classic-dress", // product page link slug
+  "selling_price": 90, // product selling price
+  "original_price": 120, // product original price
+  "image": "https://dukaan-us.s3.amazonaws.com/1d.png", // product first image
+  "all_images": [ // product all images.
+    "https://dukaan-us.s3.amazonaws.com/6963100/1d.png", // {{ DUKAAN_PRODUCT.all_images[0] }}
+    "https://dukaan-us.s3.amazonaws.com/6963100/2d.png", // {{ DUKAAN_PRODUCT.all_images[1] }}
+    "https://dukaan-us.s3.amazonaws.com/6963100/3d.png", // {{ DUKAAN_PRODUCT.all_images[2] }}
+  ],
+  "description": "<p>Best dress online. Best quality</p>", // Product description
+  "in_stock": true, // Product in-stock
+  "productDiscount": 25, // product discount percent
+  "reviews": {
+    "rating_average": 4.5, // average product rating {{DUKAAN_PRODUCT.reviews.rating_average}}
+    "total_count": 1045 // // total number of ratings {{DUKAAN_PRODUCT.reviews.total_count}}
+  },
+  "seo_data": {  // Product seo information, used with meta tags.
+    "title": "Buy Classic Dress online from Ever Design Store",
+    "description": "Order Classic Dress online from Ever Design Store. View full catalogue for the home delivery.",
+    "og_image": "https://dukaan-us.s3.amazonaws.com/6963100/d.png"
+  },
+  "categories": [ // all categories in which the product is
+    {
+      "id": 11552886,
+      "uuid": "2426a1ae-57a5-4106-8d98-6ad9b51068d0",
+      "name": "Dresses", // category name, {{ DUKAAN_PRODUCT.categories[0].name }}
+      "position": 1,
+      "slug": "dresses", // category page link slug
+      "in_stock": true,
+      "image": "https://dukaan-us.s3.amazonaws.com/6963100/ec2.png", // category thumbnail
+      "parent_id": null, // parent category id
+      "depth": 1,
+    }
+  ],
+  "skus": [ // All variants list
+    {
+      "id": 26198705, // sku id
+      "uuid": "450b2446-5779-45af-8185-d7bd604c16a3", // sku uuid
+      "sku_code": 'GT-400', // SKU code filled in the dashboard
+      "inventory": 10, // SKU current inventory, null means infinite
+      "original_price": 120, // SKU original price
+      "selling_price": 90, // SKU selling price
+      "primary_image": "https://api.mydukaan.io/static/images/category-def.jpg", // SKU image
+      "attributes": [ // all sku attributes
+        {
+          "id": 10663180,
+          "uuid": "f6199da2-43cb-4326-a664-f085e15c42c0",
+          "unit": "",
+          "value": "One size fit", // sku attribute value: L, XL, M, S, XS
+          "master_attribute": "size" // sku attribute name: size, color, fabric, veg_nonveg
+        },
+        {
+          "id": 10663182,
+          "uuid": "45199da2-43cb-4326-a664-f085e15c42c0",
+          "unit": "",
+          "value": "Cotton",
+          "master_attribute": "fabric"
+        }
+      ],
+      "in_stock": true // sku in stock
+    }
+  ]
+}
