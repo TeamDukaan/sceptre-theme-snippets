@@ -5,11 +5,11 @@
 <!-- Everything in here will go inside <head> tag -->
 {% block head %}
 
-<!--  this will include product.css present in /public/css/product.css-->
-{{ 'product.css' | css | static }}
+  <!--  this will include product.css present in /public/css/product.css-->
+  {{ 'product.css' | css | static }}
 
-<!--  this will include common seo tags, schema tags, can be skipped if you want to add your own tags -->
-{% include '../common/page-imports/product-page-imports.html' %}
+  <!--  this will include common seo tags, schema tags, can be skipped if you want to add your own tags -->
+  {% include '../common/page-imports/product-page-imports.html' %}
 
 {% endblock head %}
 

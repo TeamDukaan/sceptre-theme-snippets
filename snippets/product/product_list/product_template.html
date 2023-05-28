@@ -1,0 +1,62 @@
+<!-- all classes and ids mentioned here are mandatory and should follow the same format -->
+<!-- any extra classes can be added for styling -->
+
+<!-- add to bag button template -->
+<template id="add-to-bag-button-with-variant">
+  <div class="add-to-bag-button-wrapper">
+    <!-- add to bag state when no product is added -->
+    <button class="without-cart-add-to-bag-button">
+      Add to cart
+    </button>
+
+    <!-- add to bag state when products are added -->
+    <!-- this is stepper button format -->
+    <button class="with-cart-add-to-bag-button hidden">
+      <div class="remove-button">-</div> <!-- minus button, can have svg/images as well -->
+      <div class="product-qty"></div> <!-- quantity count -->
+      <div class="add-button">+</div> <!-- plus button, can have svg/images as well -->
+    </button>
+  </div>
+</template>
+
+<!-- product card template -->
+<!-- this is how individual product will look look in the list -->
+<template id="dkn-product-card-template">
+  <div class="dkn-product-card" data-product-uuid="">
+    <div class="dkn-product-card-soldout-badge hidden">Sold out</div> <!-- sold out badge, should be hidden by default -->
+    <div class="dkn-product-card-bxgy-badge hidden" data-product-id data-product-uuid></div> <!-- BXGY badge, should be hidden by default -->
+    <a>
+      <div>
+        <div class="product-image">
+          <img class="dkn-product-card-image" /> <!-- product first image -->
+        </div>
+      </div>
+      <div>
+        <div class="dkn-product-card-name"></div> <!-- product name -->
+        <div class="dkn-product-card-description"></div> <!-- product description, rich text -->
+        <div class="">
+          <div class="dkn-product-card-selling-price"></div> <!-- product selling price -->
+          <div class="dkn-product-card-original-price"></div> <!-- product original price -->
+          <div class="dkn-product-card-discount"></div> <!-- product discount -->
+        </div>
+      </div>
+    </a>
+    <add-to-bag-button-with-variants data-product-uuid=""></add-to-bag-button-with-variants>
+  </div>
+</template>
+
+
+<!-- this is the loading point where the list will render-->
+<!--this can be anywhere on the page  -->
+<!--  custom-product-list-wrapper and custom-product-list should be the same classes mentioned in the js -->
+
+
+<!-- this is the wrapper for when the list is empty the whole section is hidden  -->
+<div class="custom-product-list-wrapper hidden">
+  <div class="">
+    <h2 class="">Custom product list</h2>
+    <div class="custom-product-list">
+      Loading products... <!-- default shimmers can be added here, this gets cleared after products load -->
+    </div>
+  </div>
+</div>
