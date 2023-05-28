@@ -1,0 +1,69 @@
+[
+  {
+    "id": 377084,
+    "position": 0,
+    "label": "SKIN",
+    "url": null,
+    "content_type": "productcategory",
+    "store_menu_type": "header",
+    "file_url": null,
+    "content_object": {
+      "id": 11959107,
+      "slug": "skin-care",
+      "image": "https://dukaan-core-file-service.s3.ap-southeast-1.amazonaws.com/dfdd.png"
+    },
+    "name": "Skin Care",
+    "child": []
+  },
+  {
+    "id": 377084,
+    "position": 0,
+    "label": "HAIR",
+    "url": null,
+    "content_type": "productcategory",
+    "store_menu_type": "header",
+    "file_url": null,
+    "content_object": {
+      "id": 11959107,
+      "slug": "skin-care",
+      "image": "https://dukaan-core-file-service.s3.ap-sd.com/skin-care.png"
+    },
+    "name": "Skin Care",
+    "child": [
+      {
+        "id": 377085,
+        "position": 0,
+        "label": "Face Wash",
+        "url": null,
+        "content_type": "productcategory",
+        "parent_id": 377084,
+        "store_menu_type": "header",
+        "file_url": null,
+        "content_object": {
+          "id": 11959091,
+          "slug": "face-wash-men-and-women",
+          "image": "https://dukaan-core-file-service.s3.ap-southeast-1.amazonaws.com/9"
+        },
+        "name": "Best Face Wash For Men & Women",
+        "child": []
+      },
+      {
+        "id": 377086,
+        "position": 0,
+        "label": "Face Wash Refill",
+        "url": null,
+        "content_type": "productcategory",
+        "parent_id": 377084,
+        "store_menu_type": "header",
+        "file_url": null,
+        "content_object": {
+          "id": 11959201,
+          "slug": "refill-pack",
+          "image": "https://dukaan-core-file-service.s3.ap-southeast-1.amazonaws.com/upload_file_service/asg/70"
+        },
+        "name": "Refillable Beauty Products",
+        "child": []
+      }
+    ]
+  }
+]
