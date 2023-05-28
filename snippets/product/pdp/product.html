@@ -42,22 +42,18 @@
   <!-- Home / Shop / Dresses / Pink Cotton Top -->
   <ul>
     <li>
-      <!-- Redirects to home page -->
-      <a href="/">Home</a>
+      <a href="/">Home</a> <!-- Redirects to home page -->
     </li>
     <li>
-      <!-- Redirects to all categories page -->
-      <a href="/categories">Shop</a>
+      <a href="/categories">Shop</a> <!-- Redirects to all categories page -->
     </li>
     <li>
       <a href="/categories/{{ DUKAAN_PRODUCT.categories[0].slug }}">
-        <!-- Get first category name -->
-        {{ DUKAAN_PRODUCT.categories[0].name }}
+        {{ DUKAAN_PRODUCT.categories[0].name }}  <!-- Get first category name -->
       </a>
     </li>
     <li aria-current="page">
-      <!-- Get product name -->
-      {{ DUKAAN_PRODUCT.name }}
+      {{ DUKAAN_PRODUCT.name }} <!-- Get product name -->
     </li>
   </ul>
 </div>
