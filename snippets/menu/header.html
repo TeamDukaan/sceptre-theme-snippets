@@ -1,0 +1,21 @@
+<!-- 2 level menu -->
+
+{% for menuItem in DUKAAN_HEADER_MENU %}
+  <li>
+    <a target="{{ menuItem | menuTarget }}"
+       href="{{ menuItem | menuLink(DUKAAN_BASE_URL) }}">
+      {{ menuItem.label }}
+      {% if menuItem.child.length > 0 %}
+      <p> > </p>
+      <div>
+        {% for child in menuItem.child %}
+          <a target="{{ child | menuTarget }}"
+             href="{{ child | menuLink(DUKAAN_BASE_URL) }}">
+            {{ child.label }}
+          </a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </a>
+  </li>
+{% endfor %}
